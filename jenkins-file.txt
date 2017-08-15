@@ -1,0 +1,17 @@
+pipeline
+{ 
+agent
+{
+label "windows_slave"
+}
+  stages
+  {
+    stage('build')
+    {
+      steps 
+      {
+      bat 'mvn clean install'
+      }
+    }
+}
+}
